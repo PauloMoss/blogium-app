@@ -26,7 +26,8 @@ export default function PostShowPage() {
   }
 
   function onDeleteButtonClick() {
-    const request = axios.delete(`http://localhost:4000/posts/${postId}`, {data: post});
+    const data = {data: post};
+    const request = axios.delete(`http://localhost:4000/posts/${postId}`, {}, data );
     request.then((res)=>{
       console.log(res.data)
       history.push('/');

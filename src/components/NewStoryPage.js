@@ -18,7 +18,6 @@ export default function NewStoryPage() {
     }
     const request = axios.post("http://localhost:4000/posts", body);
     request.then(response => {
-      console.log(response.data)
     })
   }
 
